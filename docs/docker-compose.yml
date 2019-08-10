@@ -1,0 +1,11 @@
+version: "2"
+services:
+  quito.core:
+    image: hiremi:latest
+    restart: unless-stopped
+    volumes:
+    - ./data/blobstorage:/data/blobstorage
+    - ./data/filestorage:/data/filestorage
+    ports:
+    - "8080:8080"
+

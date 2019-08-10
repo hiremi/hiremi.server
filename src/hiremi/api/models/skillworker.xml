@@ -1,0 +1,82 @@
+<model xmlns:form="http://namespaces.plone.org/supermodel/form" xmlns:i18n="http://xml.zope.org/namespaces/i18n" xmlns:lingua="http://namespaces.plone.org/supermodel/lingua" xmlns:marshal="http://namespaces.plone.org/supermodel/marshal" xmlns:security="http://namespaces.plone.org/supermodel/security" xmlns:users="http://namespaces.plone.org/supermodel/users" xmlns="http://namespaces.plone.org/supermodel/schema" i18n:domain="hiremi.api">
+  <schema>
+    <field name="first_name" type="zope.schema.TextLine">
+      <description>The  skill worker first name</description>
+      <title>First Name</title>
+    </field>
+    <field name="lastname" type="zope.schema.TextLine">
+      <description>The skilled worker's Lastname</description>
+      <title>Lastname</title>
+    </field>
+    <field name="username" type="zope.schema.TextLine">
+      <description>the username for the skilled worker</description>
+      <title>username</title>
+    </field>
+    <field name="profile_picture" type="plone.namedfile.field.NamedBlobImage">
+      <description>The profile picture for the user</description>
+      <required>False</required>
+      <title>Profile Picture</title>
+    </field>
+    <field name="address_line_1" type="zope.schema.TextLine">
+      <description>The address line 1</description>
+      <required>False</required>
+      <title>Address Line 1</title>
+    </field>
+    <field name="address_line_2" type="zope.schema.TextLine">
+      <description>Address Line 2</description>
+      <required>False</required>
+      <title>Address Line 2</title>
+    </field>
+    <field name="email_address" type="plone.schema.email.Email">
+      <description>The user email address</description>
+      <required>False</required>
+      <title>Email Address</title>
+    </field>
+    <field name="phone_number" type="zope.schema.Int">
+      <description>The user phone number</description>
+      <required>False</required>
+      <title>Phone Number</title>
+    </field>
+    <field name="skill" type="zope.schema.Choice">
+      <description>The specific skill of the worker</description>
+      <title>SKill</title>
+      <values>
+        <element>None</element>
+        <element>Plumber</element>
+        <element>Carpenter</element>
+        <element>Web Developer</element>
+        <element>House Cleaner</element>
+        <element>Electrician</element>
+        <element>Painter</element>
+        <element>Mechanic</element>
+      </values>
+    </field>
+    <field name="certification" type="plone.namedfile.field.NamedBlobFile">
+      <description>The user certifications</description>
+      <required>False</required>
+      <title>Certification</title>
+    </field>
+    <field name="certification_text" type="zope.schema.TextLine">
+      <description>A string listing the user certification</description>
+      <required>False</required>
+      <title>Certification Text</title>
+    </field>
+    <field name="rating" type="zope.schema.Int">
+      <description>the skill worker rating</description>
+      <max>5</max>
+      <required>False</required>
+      <title>Rating</title>
+    </field>
+    <fieldset name="profile_picture" label="Profile Picture" description="The profile picture for a user"/>
+    <fieldset name="credentials" label="credentials" description="The user credentials">
+      <field name="password" type="zope.schema.Password">
+        <description>The user password</description>
+        <title>Password</title>
+      </field>
+      <field name="confirm_password" type="zope.schema.Password">
+        <description>The password confirmation for a user</description>
+        <title>Confirm Password</title>
+      </field>
+    </fieldset>
+  </schema>
+</model>

@@ -1,0 +1,34 @@
+<model xmlns:form="http://namespaces.plone.org/supermodel/form" xmlns:i18n="http://xml.zope.org/namespaces/i18n" xmlns:lingua="http://namespaces.plone.org/supermodel/lingua" xmlns:marshal="http://namespaces.plone.org/supermodel/marshal" xmlns:security="http://namespaces.plone.org/supermodel/security" xmlns:users="http://namespaces.plone.org/supermodel/users" xmlns="http://namespaces.plone.org/supermodel/schema" i18n:domain="hiremi.api">
+  <schema>
+    <field name="complete" type="zope.schema.Bool">
+      <default>False</default>
+      <description/>
+      <title>Complete</title>
+      <form:widget type="z3c.form.browser.radio.RadioFieldWidget"/>
+    </field>
+    <field name="customer_name" type="zope.schema.TextLine">
+      <description>The name of the customer</description>
+      <required>False</required>
+      <title>Customer Name</title>
+    </field>
+    <field name="customer_id" type="zope.schema.TextLine">
+      <description>The id customer</description>
+      <required>False</required>
+      <title>Customer Id</title>
+    </field>
+    <field name="creation_date" type="zope.schema.Datetime">
+      <description>The date of creation of the system</description>
+      <title>Creation date</title>
+    </field>
+    <field name="completion_date" type="zope.schema.Datetime">
+      <description>The date of completion</description>
+      <required>False</required>
+      <title>Completion Date</title>
+    </field>
+    <field name="additional_files" type="plone.namedfile.field.NamedBlobFile">
+      <description>the additional files for the file</description>
+      <required>False</required>
+      <title>additional files</title>
+    </field>
+  </schema>
+</model>
