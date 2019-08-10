@@ -1,0 +1,6 @@
+[report]
+include =
+    src/hiremi/*
+omit =
+    */test*
+    */upgrades/*

@@ -1,0 +1,4 @@
+graft src/hiremi
+graft docs
+include *.rst
+global-exclude *.pyc
